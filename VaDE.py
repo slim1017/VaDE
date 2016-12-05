@@ -73,9 +73,9 @@ def load_data(dataset):
         Y = np.concatenate((y_train,y_test))
         
     if dataset == 'reuters10k':
-        X = np.load(path+'x10k.npy')
-        Y = np.load(path+'y10k.npy')
-        X = X.astype('float32')
+        data=scio.loadmat(path+'reuters10k.mat')
+        X = data['X']
+        Y = data['Y'].squeeze()
         
     if dataset == 'har':
         data=scio.loadmat(path+'HAR.mat')
