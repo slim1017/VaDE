@@ -40,7 +40,7 @@ python ./VaDE_test_reuters_all.py
 
 **Face generation on CelebA**
 * Attribute-conditioned generation without using any supervised information
-![image](https://github.com/slim1017/VaDE/blob/master/center_generation.jpg)
+![image](https://github.com/slim1017/VaDE/blob/master/cluster_generation.jpg)
 * Interpolation between cluster centers in latent space
 ![image](https://github.com/slim1017/VaDE/blob/master/interpolation.jpg)
 * Vector arithmetic in latent space：right + left = front
