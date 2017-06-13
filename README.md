@@ -43,6 +43,7 @@ Face generation by VaDE on CelebA
 =================
 (DCGAN-like network architecture)
 * Attribute-conditioned generation (sampled from each cluster) without using any supervised information
+
 1-6 rows: 1.black/short hair, man; 2.black/long hair, woman; 3.gold/long hair, woman; 4.bald, sunglasses, man; 5.left side face, woman; 6.right side face, woman;
 ![image](https://github.com/slim1017/VaDE/blob/master/cluster_generation.jpg)
 
