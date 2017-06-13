@@ -37,3 +37,8 @@ python ./VaDE_test_reuters_all.py
 ```
 
 **Note**: the data preprocessing code for the Reuters dataset is taken from (https://github.com/piiswrong/dec).
+
+**Face generation on CelebA**
+* Attribute-conditioned generation without using any supervised information
+* Interpolation between cluster centers in latent space
+* Vector arithmetic in latent space：right + left = front
