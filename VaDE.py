@@ -89,7 +89,7 @@ def load_data(dataset):
 
 def config_init(dataset):
     if dataset == 'mnist':
-        return 784,500,10,0.002,0.002,10,0.9,0.9,1,'sigmoid'
+        return 784,3000,10,0.002,0.002,10,0.9,0.9,1,'sigmoid'
     if dataset == 'reuters10k':
         return 2000,15,4,0.002,0.002,5,0.5,0.5,1,'linear'
     if dataset == 'har':
