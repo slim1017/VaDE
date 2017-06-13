@@ -38,8 +38,11 @@ python ./VaDE_test_reuters_all.py
 
 **Note**: the data preprocessing code for the Reuters dataset is taken from (https://github.com/piiswrong/dec).
 
-**Face generation on CelebA**
-* Attribute-conditioned generation without using any supervised information
+
+Face generation by VaDE on CelebA
+=================
+(DCGAN-like network architecture)
+* Attribute-conditioned generation (sampled from each cluster) without using any supervised information
 ![image](https://github.com/slim1017/VaDE/blob/master/cluster_generation.jpg)
 * Interpolation between cluster centers in latent space
 ![image](https://github.com/slim1017/VaDE/blob/master/interpolation.jpg)
