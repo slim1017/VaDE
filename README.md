@@ -8,7 +8,7 @@ Requirements
 =================
 * Python-3.4.4
 * keras-1.1.0
-* scikit-learn-1.17.1
+* scikit-learn-0.17.1
 
 **Replace** `keras/engine/training.py` by `training.py` in this repository!!
 
