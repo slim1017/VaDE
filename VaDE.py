@@ -158,6 +158,11 @@ def load_pretrain_weights(vade,dataset):
     vade.layers[-2].set_weights(ae.layers[-2].get_weights())
     vade.layers[-3].set_weights(ae.layers[-3].get_weights())
     vade.layers[-4].set_weights(ae.layers[-4].get_weights())
+    print ('pretrain weights loaded!')
+    return vade
+#===================================
+
+def set_cluster(dataset):
     sample = sample_output.predict(X,batch_size=batch_size)
     if dataset == 'mnist':
         g = mixture.GMM(n_components=n_centroid,covariance_type='diag')
@@ -173,9 +178,6 @@ def load_pretrain_weights(vade,dataset):
         g.fit(sample)
         u_p.set_value(floatX(g.means_.T))
         lambda_p.set_value((floatX(g.covars_.T)))
-    print ('pretrain weights loaded!')
-    return vade
-#===================================
 def lr_decay():
     if dataset == 'mnist':
         adam_nn.lr.set_value(floatX(max(adam_nn.lr.get_value()*decay_nn,0.0002)))
@@ -253,6 +255,7 @@ gamma_output = Model(x,Gamma)
 vade = Model(x, x_decoded_mean)
 if ispretrain == True:
     vade = load_pretrain_weights(vade,dataset)
+set_cluster(dataset)
 adam_nn= Adam(lr=lr_nn,epsilon=1e-4)
 adam_gmm= Adam(lr=lr_gmm,epsilon=1e-4)
 vade.compile(optimizer=adam_nn, loss=vae_loss,add_trainable_weights=[theta_p,u_p,lambda_p],add_optimizer=adam_gmm)
